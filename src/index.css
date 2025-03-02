@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+.nav-link {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+}
+
+/* Add padding to create hover space between main link and dropdown */
+.group:hover .absolute {
+  margin-top: 0.5rem;
+}
+
+/* Create invisible padding to maintain hover state */
+.absolute::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
